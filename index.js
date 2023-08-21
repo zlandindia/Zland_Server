@@ -11,7 +11,7 @@ app.use(cors());
 const userController = require("./routes/users/userController");
 const landController = require("./routes/lands/landController");
 const notifications = require("./routes/notifications/notificationController");
-const payments = require("./routes/payments/razorpayPayment");
+const payments = require("./routes/payments/paymentGateways");
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello, from backend" });
