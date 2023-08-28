@@ -9,6 +9,7 @@ app.use(cors());
 
 
 const userController = require("./routes/users/userController");
+const appVersionManagement = require("./routes/users/appVersionManagement");
 const landController = require("./routes/lands/landController");
 const notifications = require("./routes/notifications/notificationController");
 const payments = require("./routes/payments/paymentGateways");
@@ -20,6 +21,7 @@ app.use("/api/userController", userController);
 app.use("/api/landController", landController);
 app.use("/api/notifications", notifications);
 app.use("/api/payment", payments);
+app.use("/api/version", appVersionManagement);
 
 // Database Connection
 const uri =
